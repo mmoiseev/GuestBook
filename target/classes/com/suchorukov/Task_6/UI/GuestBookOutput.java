@@ -1,5 +1,8 @@
 package com.suchorukov.Task_6.UI;
 
-public interface GuestBookOutput {
-    void sendResult();
+import java.io.Closeable;
+import java.io.IOException;
+
+public interface GuestBookOutput extends Closeable {
+    public abstract void sendResult(String message) throws IOException;
 }

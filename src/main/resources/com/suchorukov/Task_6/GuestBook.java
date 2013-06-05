@@ -1,15 +1,39 @@
 package com.suchorukov.Task_6;
 
-import java.util.List;
+import com.suchorukov.Task_6.DataBase.GuestBookDB;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
 
 public class GuestBook  implements GuestBookController{
 
+    private GuestBookDB db;
+
+    public GuestBook(GuestBookDB db) {
+        if (db == null)
+            throw new IllegalArgumentException("Не инициализирован контроллер базы данных");
+
+        this.db = db;
+    }
+
     public void addRecord(String message) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        try {
+            db.addRecord(message);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 
     public List<Record> getRecords() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<Record> list = new ArrayList<Record>();
+        try {
+            list = db.getRecords();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

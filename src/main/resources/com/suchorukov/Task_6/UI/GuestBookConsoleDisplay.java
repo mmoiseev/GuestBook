@@ -8,7 +8,12 @@ public class GuestBookConsoleDisplay implements GuestBookOutput{
     Writer writer = new OutputStreamWriter(out);
 
     public void sendResult(String message) throws IOException {
-        writer.write(message);
+        writer.write(message + "\n\r");
         writer.flush();
+    }
+
+    @Override
+    public void close() throws IOException {
+        writer.close();
     }
 }

@@ -1,19 +1,23 @@
 package com.suchorukov.Task_6.UI;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
 public class GuestBookConsoleReader implements GuestBookInput {
-    private InputStream in = null;
+    private InputStream in = System.in;
+    private Scanner scanner;
 
     public GuestBookConsoleReader() {
-        Scanner scanner = new Scanner(in);
-
+        scanner = new Scanner(in);
     }
 
-
     public String getCommand() {
+        return scanner.nextLine();
+    }
 
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    @Override
+    public void close() throws IOException {
+        scanner.close();
     }
 }

@@ -1,13 +1,19 @@
 package com.suchorukov.Task_6.UI;
 
 
-import java.io.OutputStream;
+import java.io.*;
 
 public class GuestBookConsoleDisplay implements GuestBookOutput{
-    private OutputStream out;
+    private OutputStream out = System.out;
+    Writer writer = new OutputStreamWriter(out);
+
+    public void sendResult(String message) throws IOException {
+        writer.write(message + "\n\r");
+        writer.flush();
+    }
 
     @Override
-    public void sendResult() {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public void close() throws IOException {
+        writer.close();
     }
 }
