@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-public class GuestBook  implements GuestBookController{
+public class BusinessController implements GuestBookController{
 
     private GuestBookDB db;
 
-    public GuestBook(GuestBookDB db) {
+    public BusinessController(GuestBookDB db) {
         if (db == null)
             throw new IllegalArgumentException("Не инициализирован контроллер базы данных");
 

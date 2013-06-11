@@ -10,13 +10,13 @@ public class GuestBookUIController {
     private GuestBookOutput output;
     private GuestBookController guestBook;
 
-    public GuestBookUIController(GuestBookInput input, GuestBookOutput output, GuestBook guestBook) throws IOException {
-        if (input == null || output == null || guestBook == null)
+    public GuestBookUIController(GuestBookInput input, GuestBookOutput output, BusinessController businessController) throws IOException {
+        if (input == null || output == null || businessController == null)
             throw new IllegalArgumentException("Инициализированы не все параметры!");
 
         this.input = input;
         this.output = output;
-        this.guestBook = guestBook;
+        this.guestBook = businessController;
 
         dialog();
     }
