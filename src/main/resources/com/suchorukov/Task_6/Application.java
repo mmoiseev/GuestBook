@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 
-public class GuestBookApp {
+public class Application {
     public static void main(String[] args) {
         Connection connection = null;
         String driver = "jdbc:h2:mem";
