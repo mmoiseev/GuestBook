@@ -1,9 +1,9 @@
-package com.suchorukov.Task_6;
+package com.suchorukov.guestBook;
 
-import com.suchorukov.Task_6.database.GuestBookDB;
-import com.suchorukov.Task_6.database.H2;
-import com.suchorukov.Task_6.userDialog.ConsoleDisplay;
-import com.suchorukov.Task_6.userDialog.ConsoleReader;
+import com.suchorukov.guestBook.database.GuestBookDB;
+import com.suchorukov.guestBook.database.H2;
+import com.suchorukov.guestBook.userDialog.ConsoleDisplay;
+import com.suchorukov.guestBook.userDialog.ConsoleReader;
 
 import java.io.IOException;
 import java.sql.Connection;

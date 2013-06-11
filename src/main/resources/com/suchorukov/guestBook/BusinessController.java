@@ -1,6 +1,6 @@
-package com.suchorukov.Task_6;
+package com.suchorukov.guestBook;
 
-import com.suchorukov.Task_6.database.GuestBookDB;
+import com.suchorukov.guestBook.database.GuestBookDB;
 
 import java.sql.SQLException;
 import java.util.*;

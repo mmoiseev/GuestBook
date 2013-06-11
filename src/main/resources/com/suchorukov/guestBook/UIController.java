@@ -1,6 +1,6 @@
-package com.suchorukov.Task_6;
+package com.suchorukov.guestBook;
 
-import com.suchorukov.Task_6.userDialog.*;
+import com.suchorukov.guestBook.userDialog.*;
 
 import java.io.IOException;
 import java.util.List;

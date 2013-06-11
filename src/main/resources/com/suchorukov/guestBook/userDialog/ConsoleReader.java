@@ -1,4 +1,4 @@
-package com.suchorukov.Task_6.userDialog;
+package com.suchorukov.guestBook.userDialog;
 
 import java.io.IOException;
 import java.io.InputStream;

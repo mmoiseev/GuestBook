@@ -1,4 +1,4 @@
-package com.suchorukov.Task_6;
+package com.suchorukov.guestBook;
 
 import java.util.Date;
 

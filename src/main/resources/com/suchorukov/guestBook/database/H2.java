@@ -1,6 +1,6 @@
-package com.suchorukov.Task_6.database;
+package com.suchorukov.guestBook.database;
 
-import com.suchorukov.Task_6.Record;
+import com.suchorukov.guestBook.Record;
 
 import java.sql.*;
 import java.sql.Date;
