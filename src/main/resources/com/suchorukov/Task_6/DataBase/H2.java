@@ -7,11 +7,11 @@ import java.sql.Date;
 import java.util.*;
 
 
-public class GuestBookH2 implements GuestBookDB {
+public class H2 implements GuestBookDB {
     private Connection connection;
     private static int identifier;
 
-    public GuestBookH2(Connection connection) {
+    public H2(Connection connection) {
         this.connection = connection;
 
     }

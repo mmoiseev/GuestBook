@@ -1,7 +1,7 @@
 package com.suchorukov.Task_6;
 
 import com.suchorukov.Task_6.DataBase.GuestBookDB;
-import com.suchorukov.Task_6.DataBase.GuestBookH2;
+import com.suchorukov.Task_6.DataBase.H2;
 import com.suchorukov.Task_6.UI.GuestBookConsoleDisplay;
 import com.suchorukov.Task_6.UI.GuestBookConsoleReader;
 
@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,7 +20,7 @@ public class Application {
         try {
             Class.forName("org.h2.Driver");
             connection = DriverManager.getConnection(driver + ":" + database, user, pass);
-            GuestBookDB db = new GuestBookH2(connection);
+            GuestBookDB db = new H2(connection);
             db.createTable();
             new  GuestBookUIController(new GuestBookConsoleReader(), new GuestBookConsoleDisplay(), new GuestBook(db));
         } catch (ClassNotFoundException e) {
