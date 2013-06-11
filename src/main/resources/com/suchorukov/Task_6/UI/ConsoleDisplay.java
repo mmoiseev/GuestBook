@@ -3,7 +3,7 @@ package com.suchorukov.Task_6.UI;
 
 import java.io.*;
 
-public class GuestBookConsoleDisplay implements GuestBookOutput{
+public class ConsoleDisplay implements GuestBookOutput{
     private OutputStream out = System.out;
     Writer writer = new OutputStreamWriter(out);
 

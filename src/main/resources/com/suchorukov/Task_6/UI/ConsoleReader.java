@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class GuestBookConsoleReader implements GuestBookInput {
+public class ConsoleReader implements GuestBookInput {
     private InputStream in = System.in;
     private Scanner scanner;
 
-    public GuestBookConsoleReader() {
+    public ConsoleReader() {
         scanner = new Scanner(in);
     }
 

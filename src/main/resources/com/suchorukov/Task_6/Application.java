@@ -2,8 +2,8 @@ package com.suchorukov.Task_6;
 
 import com.suchorukov.Task_6.DataBase.GuestBookDB;
 import com.suchorukov.Task_6.DataBase.H2;
-import com.suchorukov.Task_6.UI.GuestBookConsoleDisplay;
-import com.suchorukov.Task_6.UI.GuestBookConsoleReader;
+import com.suchorukov.Task_6.UI.ConsoleDisplay;
+import com.suchorukov.Task_6.UI.ConsoleReader;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -22,7 +22,7 @@ public class Application {
             connection = DriverManager.getConnection(driver + ":" + database, user, pass);
             GuestBookDB db = new H2(connection);
             db.createTable();
-            new  GuestBookUIController(new GuestBookConsoleReader(), new GuestBookConsoleDisplay(), new GuestBook(db));
+            new  GuestBookUIController(new ConsoleReader(), new ConsoleDisplay(), new GuestBook(db));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
