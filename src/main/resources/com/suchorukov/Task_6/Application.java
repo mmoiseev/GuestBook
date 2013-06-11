@@ -22,7 +22,7 @@ public class Application {
             connection = DriverManager.getConnection(driver + ":" + database, user, pass);
             GuestBookDB db = new H2(connection);
             db.createTable();
-            new  GuestBookUIController(new ConsoleReader(), new ConsoleDisplay(), new BusinessController(db));
+            new UIController(new ConsoleReader(), new ConsoleDisplay(), new BusinessController(db));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
