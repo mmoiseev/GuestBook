@@ -1,12 +1,9 @@
-package com.suchorukov.Task_6.DataBase;
+package com.suchorukov.Task_6.database;
 
 import com.suchorukov.Task_6.Record;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public interface GuestBookDB {
     void createTable() throws SQLException;

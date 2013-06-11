@@ -1,4 +1,4 @@
-package com.suchorukov.Task_6.UI;
+package com.suchorukov.Task_6.userDialog;
 
 import java.io.Closeable;
 import java.io.IOException;

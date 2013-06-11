@@ -1,6 +1,6 @@
 package com.suchorukov.Task_6;
 
-import com.suchorukov.Task_6.UI.*;
+import com.suchorukov.Task_6.userDialog.*;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.suchorukov.Task_6.DataBase;
+package com.suchorukov.Task_6.database;
 
 import com.suchorukov.Task_6.Record;
 
@@ -58,7 +58,7 @@ public class H2 implements GuestBookDB {
         } finally {
             if (statement != null) statement.close();
         }
-        return id = id != 0 ? id : 1;
+        return id != 0 ? id : 1;
     }
 
     @Override

@@ -1,9 +1,9 @@
 package com.suchorukov.Task_6;
 
-import com.suchorukov.Task_6.DataBase.GuestBookDB;
-import com.suchorukov.Task_6.DataBase.H2;
-import com.suchorukov.Task_6.UI.ConsoleDisplay;
-import com.suchorukov.Task_6.UI.ConsoleReader;
+import com.suchorukov.Task_6.database.GuestBookDB;
+import com.suchorukov.Task_6.database.H2;
+import com.suchorukov.Task_6.userDialog.ConsoleDisplay;
+import com.suchorukov.Task_6.userDialog.ConsoleReader;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -31,7 +31,7 @@ public class Application {
             e.printStackTrace();
         } finally {
             try {
-                connection.close();
+                if (connection != null)connection.close();
             } catch (SQLException e) {}
         }
 
